@@ -97,6 +97,23 @@ body {
 
 .main-content {
   grid-area: main-content;
+  display: grid;
+  grid-template: 1fr 1fr / 2fr 1fr;
+  grid-template-areas: 
+  "projects announcements"
+  "projects trending";
+}
+
+.projects {
+  grid-area: projects;
+}
+
+.announcements {
+  grid-area: announcements;
+}
+
+.trending {
+  grid-area: trending;
 }
 
 ul {
