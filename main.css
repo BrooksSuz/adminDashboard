@@ -5,7 +5,7 @@ html {
 *, *::before, *::after {
   box-sizing: inherit;
   margin: 0;
-  height: 100%;
+  color: white;
 }
 
 body {
@@ -16,14 +16,33 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 4fr;
   grid-template-areas: 
   "sidebar header"
   "sidebar main-content"; 
+  height: 100%;
 }
 
 .sidebar {
   grid-area: sidebar;
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr;
+  grid-template-areas: 
+  "d-header"
+  "d-nav"
+  "d-user";
+}
+
+.dashboard-header {
+  grid-area: d-header;
+}
+
+.dashboard-nav {
+  grid-area: d-nav;
+}
+
+.dashboard-user {
+  grid-area: d-user;
 }
 
 .header {
@@ -32,4 +51,12 @@ body {
 
 .main-content {
   grid-area: main-content;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
