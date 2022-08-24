@@ -47,6 +47,52 @@ body {
 
 .header {
   grid-area: header;
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr; 
+  grid-template-areas: 
+  "c-search c-buttons"
+  "c-user-info c-buttons";
+}
+
+.container-search {
+  grid-area: c-search;
+}
+
+.container-user-info {
+  grid-area: c-user-info;
+}
+
+.container-buttons {
+  grid-area: c-buttons;
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  grid-template-areas: 
+  "notif profile1 profile2"
+  "new upload share";
+}
+
+.notif {
+  grid-area: notif;
+}
+
+.profile1 {
+  grid-area: profile1;
+}
+
+.profile2 {
+  grid-area: profile2;
+}
+
+.new {
+  grid-area: new;
+}
+
+.upload {
+  grid-area: upload;
+}
+
+.share {
+  grid-area: share;
 }
 
 .main-content {
@@ -59,4 +105,8 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+button {
+  color: black;
 }
