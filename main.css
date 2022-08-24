@@ -108,6 +108,40 @@ body {
   grid-area: projects;
 }
 
+.container-projects {
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr;
+  grid-template-areas: 
+  "super less"
+  "okay meh"
+  "fan smelly";
+  height: 100%;
+}
+
+.super {
+  grid-area: super;
+}
+
+.less {
+  grid-area: less;
+}
+
+.okay {
+  grid-area: okay;
+}
+
+.meh {
+  grid-area: meh;
+}
+
+.fan {
+  grid-area: fan;
+}
+
+.smelly {
+  grid-area: smelly;
+}
+
 .announcements {
   grid-area: announcements;
 }
@@ -126,4 +160,8 @@ a {
 
 button {
   color: black;
+}
+
+p {
+  font-size: 12px;
 }
